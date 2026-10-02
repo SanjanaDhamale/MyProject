@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sanjana Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1c2340; --sub:#6b7290; --blue:#3d6bff; --peach:#ffb37a; --mint:#3fbf9f;
+    --bg:#dcecfb; --card:#ffffff; --line:#eef1f8;
+    padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Inter',sans-serif;color:var(--ink);
+    background:radial-gradient(circle at 10% 10%,#e7f2fd,var(--bg) 60%);
+    min-height:100%;padding:32px 16px;}
+  h1,h2,h3{font-family:'Poppins',sans-serif}
+  .page{max-width:760px;margin:0 auto;background:var(--card);border-radius:28px;
+    box-shadow:0 20px 50px rgba(30,50,100,.12);overflow:hidden}
+
+  nav{display:flex;justify-content:space-between;align-items:center;padding:22px 32px;border-bottom:1px solid var(--line)}
+  .brand{display:flex;align-items:center;gap:8px;font-weight:700;font-size:0.92rem}
+  .brand .dot{width:26px;height:26px;border-radius:8px;background:var(--ink)}
+  nav ul{display:flex;gap:22px;list-style:none}
+  nav a{text-decoration:none;color:var(--sub);font-size:.9rem;font-weight:500;transition:color .2s}
+  nav a:hover{color:var(--blue)}
+
+  .hero{display:flex;align-items:center;gap:28px;padding:40px 32px 8px;flex-wrap:wrap}
+  .hero-text{flex:1;min-width:240px}
+  .eyebrow{display:inline-block;background:#ffe9d6;color:var(--peach);font-weight:600;font-size:.8rem;
+    padding:6px 16px;border-radius:20px;margin-bottom:14px}
+  .hero h1{font-size:1.9rem;line-height:1.25}
+  .hero h1 span{color:var(--blue)}
+  .hero p{color:var(--sub);margin:14px 0 20px;font-size:.95rem;max-width:340px}
+
+  .avatar{width:180px;height:180px;border-radius:50%;flex-shrink:0;
+    background:linear-gradient(160deg,#dbe9ff,#bcd4ff);
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Poppins',sans-serif;font-weight:700;font-size:2.6rem;color:var(--blue);}
+
+  .subscribe{display:flex;gap:8px;max-width:340px}
+  .subscribe input{flex:1;padding:12px 14px;border:1px solid var(--line);border-radius:10px;font:inherit}
+  .subscribe button{padding:12px 20px;border:none;border-radius:10px;background:var(--ink);color:#fff;font-weight:600;cursor:pointer;transition:background .2s}
+  .subscribe button:hover{background:var(--blue)}
+
+  section{padding:34px 32px}
+  .kicker{text-align:center;color:var(--peach);font-weight:600;font-size:.78rem;letter-spacing:.5px}
+  section > h2{text-align:center;font-size:1.5rem;margin:6px 0 26px}
+
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .item{display:flex;gap:14px;padding:16px;border-radius:14px;background:#f7f9ff}
+  .item .icon{width:42px;height:42px;border-radius:10px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:1.15rem}
+  .item h3{font-size:.98rem;margin-bottom:4px}
+  .item p{font-size:.85rem;color:var(--sub)}
+  .icon.blue{background:#e4ecff;color:var(--blue)}
+  .icon.peach{background:#ffe9d6;color:var(--peach)}
+  .icon.mint{background:#dcf6ee;color:var(--mint)}
+
+  .skills{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+  .skills span{background:#f7f9ff;border:1px solid var(--line);padding:7px 15px;border-radius:20px;font-size:.85rem;font-weight:500}
+
+  .job{display:grid;grid-template-columns:120px 1fr;gap:16px;margin-bottom:20px}
+  .job time{color:var(--sub);font-size:.8rem;font-weight:600}
+  .job h3{font-size:.98rem;margin-bottom:4px}
+  .job p{font-size:.85rem;color:var(--sub)}
+
+  .cert-list{list-style:none;display:flex;flex-direction:column;gap:12px}
+  .cert-list li{display:flex;justify-content:space-between;gap:10px;padding:14px 16px;border-radius:12px;background:#f7f9ff;font-size:.9rem}
+  .cert-list b{display:block;font-size:.92rem}
+  .cert-list span.meta{color:var(--sub);font-size:.8rem}
+
+  footer{text-align:center;padding:26px 32px 34px;color:var(--sub);font-size:.82rem;border-top:1px solid var(--line)}
+
+  @media(max-width:640px){
+    .grid2{grid-template-columns:1fr}
+    .hero{flex-direction:column-reverse;text-align:center}
+    .hero p{margin-inline:auto}
+    .subscribe{margin-inline:auto}
+    .job{grid-template-columns:1fr;gap:4px}
+    nav ul{gap:12px}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <nav>
+    <div class="brand">
+      <!--<span class="dot"></span>Sanjana Dhamale</div>-->
+      <img src="Mypic2.jpg" alt="Sanjana Dhamale" style="width: 20px; border-radius: 40%;object-fit:cover;object-position: center top;">Sanjana Dhamale</div>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#Linkedln">Linkedln</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero" id="about">
+    <div class="hero-text">
+      <span class="eyebrow">PORTFOLIO</span>
+      <h1>Hey, I'm a<br><span>SANJANA DHAMALE.</span></h1>
+      <p>I'm a Java Full Stack Developer Fresher </p>
+      <form class="subscribe" action="#" method="post">
+        <input type="email" placeholder="Email address" required>
+        <button type="submit">Contact</button>
+      </form>
+    </div>
+    <div class="avatar">
+        <img src="picture.jpg" alt="Sanjana Dhamale" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; object-position: center top;">
+    </div>
+  </header>
+
+  <section id="skills">
+    <p class="kicker">MY SKILL SET</p>
+    <h2>Skills &amp; Tools</h2>
+    <div class="skills">
+      <span>Java Full Stack</span><span>SQL</span><span>Python</span><span>POWER BI</span>
+      <span>HTML &amp; CSS</span><span>Linux</span><span>MY-SQL</span><span>C++</span>
+    </div>
+  </section>
+
+  <section>
+    <p class="kicker">MY EXPERTISE</p>
+    <h2>What I Do</h2>
+    <div class="grid2">
+      <div class="item"><div class="icon blue">◆</div><div><h3>Java Full Stack &amp; Development</h3><p>Build application using Java, OOp, SQL and MySQL.</p></div></div>
+      <div class="item"><div class="icon peach">◇</div><div><h3>Strategy &amp; Direction</h3><p>Understand the goal first, then plan the product around it.</p></div></div>
+      <div class="item"><div class="icon mint">◈</div><div><h3>Data Analytics &amp; Data Visualization</h3><p>Analyze data using Excel, SQL and Power BI & Create interactive dashboards and present insights using Power BI.</p></div></div>
+      <div class="item"><div class="icon blue">◇</div><div><h3>Web Development</h3><p>Create simple and responsive web pages using HTML & CSS.</p></div></div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <p class="kicker">CAREER SO FAR</p>
+    <h2>Experience</h2>
+    <div class="Post Graduate">
+      <time>2026 — Present</time>
+      <div><h3>MCA 1st year</h3><p>Searching new positions in IT company</p></div>
+    </div>
+    <div class="BCA">
+      <time>2022 — 2025</time>
+      <div><h3>My Graduation journey</h3><p>Exploring Opportunity and learning new skills</p></div>
+    </div>
+   <!---- <div class="job">
+      <time>2020 — 2021</time>
+      <div><h3>Design Intern, Studio North</h3><p>Supported the design team with wireframes and visual assets.</p></div>
+    </div>--->
+  </section>
+
+  <section id="certifications">
+    <p class="kicker">CREDENTIALS</p>
+    <h2>Certifications &amp; Qualifications</h2>
+    <ul class="cert-list">
+      <li><div><b>BCA</b><span class="meta">Dr. BabaSaheb Ambedkar Marathwada University, 2025</span></div></li>
+      <li><div><b>Java Full stack Certificate</b><span class="meta">Kiran Academy, 20225</span></div></li>
+      <li><div><b>Cyber Job Simulation</b><span class="meta">Deloitt, 2025</span></div></li>
+      <li><div><b>Cybersecurity Analyst job Simulation</b><span class="meta">Forage, 2026</span></div></li>
+      <li><div><b>GenAI Powered Data Analytics Job Simulation</b><span class="meta">Forage, 2026</span></div></li>
+    </ul>
+  </section>
+
+  <section id="Social Accounts">
+    <p class="kicker">See My Social Websites</p>
+    <h2>LinkedIn  &amp; GitHub</h2>
+    <div class="1">
+      <a href="https://www.linkedin.com/public-profile/settings/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_self_edit_contact_info%3BN4ilKEksQ3SIB3z1Ptdgsw%3D%3D" target="_blank" style="color: var(--blue); font-weight: 100; text-decoration: none;">
+      Connect on LinkedIn </a><br>
+      <a href="https://github.com/SanjanaDhamale" target="_blank" style="color: var(--blue); font-weight: 100; text-decoration: none;">
+        GitHub Profile</a>
+    </div>
+  </section>
+
+  <footer>&copy; 2026 Sanjana Dhamale — Open to new opportunities</footer>
+</div>
+</body>
+</html>
